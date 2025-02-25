@@ -32,30 +32,43 @@
         <div class="left-section">
             <h1>Find Global Fertility Clinics for IVF and Egg Freezing</h1>
             <p>Fertility Clinics in Europe offer procedures at up to 70% less than American clinics.</p>
-        
-<form class="email-signup" id="emailForm">
-    <input type="email" id="emailInput" placeholder="Enter your email for early access" required>
-    <button type="submit">Sign Up</button>
-</form>
 
-<script>
-document.getElementById("emailForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    var email = document.getElementById("emailInput").value;
-    
-    fetch("https://script.google.com/macros/s/AKfycbzXOQ-14RAlejjzwibulZIsmS1a01ZQTxsHAwf3o86EImNVDKvoBEjFyV6slI5sWDNn/exec", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email })
-    })
-    .then(response => response.text())
-    .then(data => {
-        alert("Thank you for signing up!");
-        document.getElementById("emailForm").reset();
-    })
-    .catch(error => console.error("Error:", error));
-});
-</script>
+            <!-- Email Sign-Up Form -->
+            <form class="email-signup" id="emailForm">
+                <input type="email" id="emailInput" placeholder="Enter your email for early access" required>
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <script>
+            document.getElementById("emailForm").addEventListener("submit", function(event) {
+                event.preventDefault();  // Prevent form submission (default reload)
+
+                // Get the email value entered
+                var email = document.getElementById("emailInput").value;
+
+                // Check if email is empty
+                if (!email) {
+                    alert("Please enter a valid email address.");
+                    return;
+                }
+
+                // Send the email to the Google Script URL
+                fetch("https://script.google.com/macros/s/AKfycbzXOQ-14RAlejjzwibulZIsmS1a01ZQTxsHAwf3o86EImNVDKvoBEjFyV6slI5sWDNn/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: email })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert("Thank you for signing up!");  // Success message
+                    document.getElementById("emailForm").reset();  // Reset form fields
+                })
+                .catch(error => {
+                    console.error("Error:", error);  // Log any errors
+                    alert("There was an error submitting your email. Please try again.");
+                });
+            });
+            </script>
 
             <p><i>We'll never share your info with anyone.</i></p>
            
@@ -66,7 +79,8 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
             </div>
         </div>
     </div>
-    
+
+    <!-- Why Join Section -->
     <div class="why-join-container">
         <h2>Why Join vitalBooker?</h2>
         <p>In essence, we provide the most comprehensive global platform where clinics can be easily found and treatments can be booked seamlessly!</p>
@@ -84,7 +98,8 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
             </div>
         </div>
     </div>
-    
+
+    <!-- FAQ Section -->
     <div class="faq-container">
         <h2>FAQ</h2>
         <div class="faq">
@@ -108,3 +123,4 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
     </div>
 </body>
 </html>
+
