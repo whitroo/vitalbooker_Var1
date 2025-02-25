@@ -43,7 +43,7 @@ document.getElementById("emailForm").addEventListener("submit", function(event) 
     event.preventDefault();
     var email = document.getElementById("emailInput").value;
     
-    fetch("https://script.google.com/macros/s/AKfycbzQ7j99aaF1yN3L03Oyv96f0RMjXc8eDHDbjI62VYHMwp0_PZZh-DMW1BGlzOvCeejB/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzXOQ-14RAlejjzwibulZIsmS1a01ZQTxsHAwf3o86EImNVDKvoBEjFyV6slI5sWDNn/exec", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: email })
