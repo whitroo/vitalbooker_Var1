@@ -53,7 +53,7 @@
                 }
 
                 // Send the email to the Google Script URL
-                fetch("https://script.google.com/macros/s/AKfycbzXOQ-14RAlejjzwibulZIsmS1a01ZQTxsHAwf3o86EImNVDKvoBEjFyV6slI5sWDNn/exec", {
+                fetch("YOUR_SCRIPT_DEPLOYMENT_URL", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email: email })
