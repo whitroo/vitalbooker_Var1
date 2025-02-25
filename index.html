@@ -48,12 +48,12 @@
 
                 // Check if email is empty
                 if (!email) {
-                    alert("Please enter a valid email address.");
+                    alert("123!Please enter a valid email address.");
                     return;
                 }
 
                 // Send the email to the Google Script URL
-                fetch("https://script.google.com/macros/s/AKfycbzQ7j99aaF1yN3L03Oyv96f0RMjXc8eDHDbjI62VYHMwp0_PZZh-DMW1BGlzOvCeejB/exec", {
+                fetch("https://script.google.com/macros/s/AKfycbypEpYHli7q_7sdSOdeWDW1EdToRqypn7ypvxngacMvq1MDpFk9Mayo4xV2apV1-52J/exec", {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email: email })
