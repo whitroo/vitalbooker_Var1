@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Signup</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        h1 {
+            color: #0073e6;
+        }
+        .email-signup {
+            margin-top: 20px;
+        }
+        input[type="email"] {
+            padding: 10px;
+            width: 70%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #0073e6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Up for Early Access</h1>
+    <form class="email-signup">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('.email-signup');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = form.querySelector('input[type="email"]').value;
+            
+            // Use your Google Apps Script URL here
+            fetch("https://script.google.com/macros/s/AKfycbzQ7j99aaF1yN3L03Oyv96f0RMjXc8eDHDbjI62VYHMwp0_PZZh-DMW1BGlzOvCeejB/exec", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email: email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Thank you for signing up!');
+            })
+            .catch(error => {
+                alert('There was an error. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>
