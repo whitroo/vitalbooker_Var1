@@ -5,112 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vitalBooker - Find Global Clinics</title>
     <meta name="description" content="Find and book fertility clinics abroad. Save up to 70% on IVF and egg freezing in top European clinics.">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; background-color: #f9f9f9; }
-        .container { display: flex; max-width: 800px; margin: 0 auto; padding: 0px; align-items: center; }
-        .left-section { flex: 1; padding-right: 0px; text-align: left; }
-        .right-section { flex: 1; }
-        h1 { color: #333; }
-        .cta { background: #0073e6; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
-        .cta:hover { background: #005bb5; }
-        .email-signup { margin-top: 20px; }
-        input[type="email"] { padding: 10px; width: 70%; border: 1px solid #ccc; border-radius: 5px; }
-        button { padding: 10px 20px; background: #0073e6; color: white; border: none; border-radius: 5px; cursor: pointer; }
-        button:hover { background: #005bb5; }
-        .faq-container, .why-join-container { max-width: 800px; margin: 30px auto; padding: 20px; text-align: left; }
-        .faq h2, .why-join-container h2 { color: #0073e6; }
-        .faq p, .why-join-container p { color: #555; }
-        .image-container img { width: 100%; border-radius: 10px; }
-        .why-join-sections { display: flex; }
-        .why-left-section { flex: 1; }
-        .why-right-section { flex: 1; padding-left: 20px; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="left-section">
-            <h1>Find Global Fertility Clinics for IVF and Egg Freezing</h1>
-            <p>Fertility Clinics in Europe offer procedures at up to 70% less than American clinics.</p>
-            <!-- Email Sign-Up Form -->
-            <form class="email-signup" id="emailForm">
-                <input type="email" id="emailInput" placeholder="Enter your email for early access" required>
-                <button type="submit">Sign Up</button>
-            </form>
-            <p><i>We'll never share your info with anyone.</i></p>
-        </div>
-        <div class="right-section">
-            <div class="image-container">
-                <img src="https://i.imgur.com/b5JOFTs.png" alt="VitalBooker Search Mockup">
-            </div>
-        </div>
-    </div>
+        /* General Styles */
+        body { 
+            font-family: 'Open Sans', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            text-align: center; 
+            background-color: #f9f9f9; 
+            color: #333;
+        }
+        .container { 
+            display: flex; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            align-items: center; 
+            justify-content: space-between;
+        }
+        .left-section { 
+            flex: 1; 
+            padding-right: 20px; 
+            text-align: left; 
+        }
+        .right-section { 
+            flex: 1; 
+        }
 
-    <!-- Why Join Section -->
-    <div class="why-join-container">
-        <h2>Why Join vitalBooker?</h2>
-        <p>In essence, we provide the most comprehensive global platform where clinics can be easily found and treatments can be booked seamlessly!</p>
-        <div class="why-join-sections">
-            <div class="why-left-section">
-                <!-- Image to be added here -->
-            </div>
-            <div class="why-right-section">
-                <p><strong>Finding Healthcare abroad shouldn't be a chore</strong><br>
-                Browse accredited clinics specializing in egg freezing and IVF. Save favorites, compare costs, manage communications and payments all in one place.</p>
-                <p><strong>Thoughtful and Data-Driven Decision Making</strong><br>
-                Find the best clinics based on your needs, validated by reviews from a worldwide community.</p>
-                <p>Feel confident to <strong>Take the First Step</strong><br>
-                Find transparent pricing and book directly and pay securely so you can start your treatment with confidence.</p>
-            </div>
-        </div>
-    </div>
+        /* Headings */
+        h1, h2, h3 {
+            color: #5ce1e6;
+        }
 
-    <!-- FAQ Section -->
-    <div class="faq-container">
-        <h2>FAQ</h2>
-        <div class="faq">
-            <h3>Why should I consider IVF treatment in Europe?</h3>
-            <p>Fertility treatments in the U.S. are expensive. Spain, for example, is a global leader in IVF and egg freezing, with cutting-edge clinics and prices up to 70% lower than in the U.S.</p>
-            
-            <h3>How much does IVF cost in Europe?</h3>
-            <p>IVF costs in Europe vary by country:</p>
-            <ul>
-                <li>Spain: €3,500 - €5,000 for IVF-ICSI</li>
-                <li>Czech Republic: €2,500 - €4,000 for IVF-ICSI</li>
-                <li>Greece: €3,000 - €4,500 for IVF-ICSI</li>
-            </ul>
-            
-            <h3>What are the success rates for IVF in Europe?</h3>
-            <p>Success rates can range from 30% to 55%, depending on the country and clinic. Greece, for example, has a delivery rate of 32% per cycle.</p>
-            
-            <h3>How do I find the right IVF clinic in Europe?</h3>
-            <p>Instead of searching clinic by clinic, vitalBooker makes it easy to compare options, find transparent pricing, and book treatments with confidence.</p>
-        </div>
-    </div>
+        /* Call to Action Button */
+        .cta { 
+            background: #0073e6; 
+            color: white; 
+            padding: 10px 20px; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            display: inline-block; 
+            margin-top: 10px; 
+        }
+        .cta:hover { 
+            background: #005bb5; 
+        }
 
-    <script>
-        document.getElementById("emailForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            var email = document.getElementById("emailInput").value;
+        /* Email Sign-Up */
+        .email-signup { 
+            margin-top: 20px; 
+        }
+        input[type="email"] { 
+            padding: 10px; 
+            width: 70%; 
+            border: 1px solid #ccc; 
+            border-radius: 5px; 
+        }
+        button { 
+            padding: 10px 20px; 
+            background: #0073e6; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        button:hover { 
+            background: #005bb5; 
+        }
 
-            if (!email) {
-                alert("Please enter a valid email address.");
-                return;
-            }
+        /* Sections */
+        .faq-container, .why-join-container { 
+            max-width: 800px; 
+            margin: 30px auto; 
+            padding: 20px; 
+            text-align: left; 
+        }
+        .faq h2, .why-join-container h2 { 
+            color: #5ce1e6; 
 
-            fetch("https://app.getresponse.com/add_subscriber.html", {
-                method: "POST",
-                body: JSON.stringify({ email: email }),
-                headers: { "Content-Type": "application/json" },
-            })
-            .then(response => response.json())
-            .then(data => {
-                alert("Thank you for signing up!");
-                document.getElementById("emailForm").reset();
-            })
-            .catch(error => {
-                alert("Error occurred while submitting the email.");
-            });
-        });
-    </script>
-</body>
-</html>
