@@ -39,48 +39,20 @@
                 <input type="email" id="emailInput" placeholder="Enter your email for early access" required>
                 <button type="submit">Sign Up</button>
             </form>
+ <!-- GetResponse Email Sign-Up Form -->
+            <form class="email-signup">
+                <getresponse-form form-id="efe775c9-18ae-422c-84db-6ff42027e961" e="0"></getresponse-form>
+            </form>
 
-<script>
-document.getElementById("emailForm").addEventListener("submit", function(event) {
-    event.preventDefault();  // Prevent form submission (default reload)
-    console.log("Form submission prevented.");
+            <p><i>We'll never share your info with anyone.</i></p>
+        </div>
+        <div class="right-section">
+            <div class="image-container">
+                <img src="https://i.imgur.com/b5JOFTs.png" alt="VitalBooker Search Mockup">
+            </div>
+        </div>
+    </div>
 
-    // Get the email value entered
-    var email = document.getElementById("emailInput").value;
-    console.log("Email entered:", email);
-
-    // Check if email is empty
-    if (!email) {
-        alert("Please enter a valid email address.");
-        console.warn("Form submission blocked: Empty email field.");
-        return;
-    }
-
-    console.log("Sending email to Google Script...");
-
-    // Send the email to the Google Script URL
-    fetch("https://script.google.com/macros/s/AKfycbzC8FNm_jUiHbVsN1_-1dsWr7YFtT-drZ241NAHD7VvJsnpEQhOg5ayJkpJ_OAWVEzG/exec", {
-        method: "POST",
-        mode: "cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email })
-    })
-    .then(response => {
-        console.log("Response received from Google Script:", response);
-        return response.text();
-    })
-    .then(data => {
-        console.log("Response data:", data);
-        alert("Thank you for signing up!");  // Success message
-        document.getElementById("emailForm").reset();  // Reset form fields
-        console.log("Form fields reset.");
-    })
-    .catch(error => {
-        console.error("Error occurred during fetch:", error);
-        alert("XThere was an error submitting your email. Please try again.");
-    });
-});
-</script>
 
 
 
