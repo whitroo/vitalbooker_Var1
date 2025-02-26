@@ -54,23 +54,22 @@
                 }
 
                 // Send the email to the Google Script URL
-                fetch("https://script.google.com/macros/s/AKfycbypEpYHli7q_7sdSOdeWDW1EdToRqypn7ypvxngacMvq1MDpFk9Mayo4xV2apV1-52J/exec", {
-                    redirect: "follow", 
-                    method: "POST",
+// Send the email to the Google Script URL
 
-                request.setRequestHeader("Content-Type", "text/plain");
-               //     headers: { "Content-Type": "application/json" },
-                 body: JSON.stringify({ email: email })
-                })
-                .then(response => response.text())
-                .then(data => {
-                    alert("Thank you for signing up!");  // Success message
-                    document.getElementById("emailForm").reset();  // Reset form fields
-                })
-                .catch(error => {
-                    console.error("Error:", error);  // Log any errors
-                    alert("XThere was an error submitting your email. Please try again.");
-                });
+                fetch("https://script.google.com/macros/s/AKfycbypEpYHli7q_7sdSOdeWDW1EdToRqypn7ypvxngacMvq1MDpFk9Mayo4xV2apV1-52J/exec", {
+                    method: "POST",
+                    headers: { "Content-Type": "text/plain" },
+                    body: JSON.stringify({ email: email })
+                })
+                .then(response => response.text())
+                .then(data => {
+                    alert("Thank you for signing up!");  // Success message
+                    document.getElementById("emailForm").reset();  // Reset form fields
+                })
+                .catch(error => {
+                    console.error("Error:", error);  // Log any errors
+                    alert("There was an error submitting your email. Please try again.");
+                });
             });
             </script>
 
