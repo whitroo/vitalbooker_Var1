@@ -57,8 +57,11 @@
                 fetch("https://script.google.com/macros/s/AKfycbypEpYHli7q_7sdSOdeWDW1EdToRqypn7ypvxngacMvq1MDpFk9Mayo4xV2apV1-52J/exec", {
                     redirect: "follow", 
                     method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ email: email })
+                    var request = new window.XMLHttpRequest();
+request.open(opts.method, opts.url, true);
+request.setRequestHeader("Content-Type", "text/plain");
+               //     headers: { "Content-Type": "application/json" },
+                 body: JSON.stringify({ email: email })
                 })
                 .then(response => response.text())
                 .then(data => {
@@ -67,7 +70,7 @@
                 })
                 .catch(error => {
                     console.error("Error:", error);  // Log any errors
-                    alert("xxxThere was an error submitting your email. Please try again.");
+                    alert("There was an error submitting your email. Please try again.");
                 });
             });
             </script>
