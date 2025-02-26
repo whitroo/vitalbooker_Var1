@@ -54,29 +54,42 @@
                 }
 
                 // Send the email to the Google Script URL
-// Send the email to the Google Script URL
+<script>
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault();  // Prevent form submission (default reload)
 
-fetch("https://script.google.com/macros/s/AKfycbypEpYHli7q_7sdSOdeWDW1EdToRqypn7ypvxngacMvq1MDpFk9Mayo4xV2apV1-52J/exec", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email: email })
-})
-.then(response => {
-    console.log("Fetch successful:", response); // Log the response
-    return response.text();
-})
-.then(data => {
-    console.log("Data received:", data); // Log the data
-    alert("Thank you for signing up!");
-    document.getElementById("emailForm").reset();
-})
-.catch(error => {
-    console.error("Error:", error); // Log the error
-    alert("There was an error submitting your email. Please try again.");
+    // Get the email value entered
+    var email = document.getElementById("emailInput").value;
+
+    // Check if email is empty
+    if (!email) {
+        alert("Please enter a valid email address.");
+        return;
+    }
+
+    // Send the email to the Google Script URL
+    console.log("Form submitted"); // Log form submission
+    fetch("https://script.google.com/macros/s/AKfycbypEpYHli7q_7sdSOdeWDW1EdToRqypn7ypvxngacMvq1MDpFk9Mayo4xV2apV1-52J/exec", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email })
+    })
+    .then(response => {
+        console.log("Fetch successful:", response); // Log the response
+        return response.text();
+    })
+    .then(data => {
+        console.log("Data received:", data); // Log the data
+        alert("Thank you for signing up!");  // Success message
+        document.getElementById("emailForm").reset();  // Reset form fields
+    })
+    .catch(error => {
+        console.error("Error:", error);  // Log any errors
+        alert("There was an error submitting your email. Please try again.");
+    });
+    console.log("Fetch request sent"); // Log after request sent
 });
-
-console.log("Fetch request sent"); // Log that the request was sent
-
+</script>
             <p><i>We'll never share your info with anyone.</i></p>
            
         </div>
