@@ -55,6 +55,7 @@
 
                 // Send the email to the Google Script URL
                 fetch("https://script.google.com/macros/s/AKfycbypEpYHli7q_7sdSOdeWDW1EdToRqypn7ypvxngacMvq1MDpFk9Mayo4xV2apV1-52J/exec", {
+                    redirect: "follow", 
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ email: email })
