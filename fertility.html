@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>vitalBooker - Find Global Clinics</title>
     <meta name="description" content="Find and book fertility clinics abroad. Save up to 70% on IVF and egg freezing in top European clinics.">
-    
+
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
@@ -86,4 +86,40 @@
         }
         .faq h2, .why-join-container h2 { 
             color: #5ce1e6; 
+        }
+        .faq p, .why-join-container p { 
+            color: #555; 
+        }
 
+        /* Image */
+        .image-container img { 
+            width: 100%; 
+            border-radius: 10px; 
+        }
+
+        /* Why Join Section */
+        .why-join-sections { 
+            display: flex; 
+        }
+        .why-left-section { 
+            flex: 1; 
+        }
+        .why-right-section { 
+            flex: 1; 
+            padding-left: 20px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-section">
+            <h1>Find Global Fertility Clinics for IVF and Egg Freezing</h1>
+            <p>Fertility Clinics in Europe offer procedures at up to 70% less than American clinics.</p>
+
+            <!-- Email Sign-Up Form -->
+            <form class="email-signup" id="emailForm">
+                <input type="email" id="emailInput" placeholder="Enter your email for early access" required>
+                <button type="submit">Sign Up</button>
+            </form>
+
+            <p><i>We'll never share your i
