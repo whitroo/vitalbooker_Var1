@@ -880,14 +880,6 @@ footer.footer {
     width: 12%;
   }
 
-  .banner-button {
-    display: none;
-  }
-
-  a.navbar-brand {
-    width: 84%;
-  }
-
   .reserv {
     font-size: 16px;
     line-height: 25px;
@@ -899,6 +891,22 @@ footer.footer {
 
   section#myHeader {
     background: #f2f2e8;
+  }
+
+  a.navbar-brand {
+    width: 42%;
+    order: 1;
+  }
+
+  button#nav-icon1 {
+    width: 12%;
+    order: 3;
+  }
+
+  .banner-button {
+    width: 40%;
+    order: 2;
+    text-align: right;
   }
 }
 
@@ -914,10 +922,6 @@ footer.footer {
 
   .faq-content {
     padding: 15px 0 0;
-  }
-
-  a.navbar-brand {
-    width: 80%;
   }
 
   .navbar-brand img {
@@ -1045,7 +1049,8 @@ footer.footer {
   .phone-menu .banner-button {
     display: block !important;
   }
+
   .phone-menu .banner-button a.bnr-btn {
     padding: 10px 20px;
-}
+  }
 }
