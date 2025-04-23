@@ -417,13 +417,17 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
 		$(document).ready(function () {
-			$('a[href="#popup1"]').on('click', function () {
-				setTimeout(function () {
-					$('#popup1').addClass('active');
-				}, 10); // Small delay to let :target take effect
-			});
+		  $('a[href="#popup1"]').on('click', function () {
+			setTimeout(function () {
+			  $('#popup1').addClass('active');
+			}, 10); // delay to allow :target to apply
+		  });
+	  
+		  $('.close').on('click', function () {
+			$('#popup1').removeClass('active');
+		  });
 		});
-	</script>
+	  </script>
 
 </body>
 
