@@ -899,12 +899,12 @@ footer.footer {
   }
 
   button#nav-icon1 {
-    width: 12%;
+    width: 5%;
     order: 3;
   }
 
   .banner-button {
-    width: 40%;
+    width: 48%;
     order: 2;
     text-align: right;
   }
@@ -1053,4 +1053,14 @@ footer.footer {
   .phone-menu .banner-button a.bnr-btn {
     padding: 10px 20px;
   }
+  .banner-button {
+    width: 40%;
+}
+button#nav-icon1 {
+  width: 12%;
+}
+.bnr-btn {
+  font-size: 13px;
+  padding: 11px 12px;
+}
 }
