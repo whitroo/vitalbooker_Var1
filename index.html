@@ -46,8 +46,8 @@
 					</ul>
 				</div>
 				<div class="banner-button">
-					<a class="bnr-btn" href="#popup1">Get Early Access</a>
-					<div id="popup1" class="overlay">
+					<a class="bnr-btn" href="#popup2">Get Early Access</a>
+					<div id="popup2" class="overlay">
 						<div class="popup">
 							<a class="close" href="#">&times;</a>
 							<div class="content">
@@ -417,18 +417,30 @@
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<script>
 		$(document).ready(function () {
-		  $('a[href="#popup1"]').on('click', function () {
-			setTimeout(function () {
-			  $('#popup1').addClass('active');
-			}, 10); // delay to allow :target to apply
-		  });
-	  
-		  $('.close').on('click', function () {
-			$('#popup1').removeClass('active');
-		  });
-		});
-	  </script>
+			$('a[href="#popup1"]').on('click', function () {
+				setTimeout(function () {
+					$('#popup1').addClass('active');
+				}, 10); 
+			});
 
+			$('.close').on('click', function () {
+				$('#popup1').removeClass('active');
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function () {
+			$('a[href="#popup2"]').on('click', function () {
+				setTimeout(function () {
+					$('#popup2').addClass('activeheader');
+				}, 10); 
+			});
+
+			$('.close').on('click', function () {
+				$('#popup2').removeClass('activeheader');
+			});
+		});
+	</script>
 </body>
 
 </html>
