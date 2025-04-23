@@ -32,6 +32,7 @@
 			<div class="container">
 				<a class="navbar-brand" href="index.html"><img src="images/logo.png" title="Lead Max LLC"
 						alt="Lead Max Home" /></a>
+						<div class="header-navbar">
 				<button id="nav-icon1" class="navbar-toggler" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation"> <span></span> <span></span> <span></span> </button>
@@ -42,26 +43,8 @@
 						<li class="nav-item"> <a class="nav-link" href="#">Why VitaBooker</a> </li>
 						<li class="nav-item"> <a class="nav-link" href="#">Dashboard Preview</a></li>
 						<li class="nav-item"> <a class="nav-link" href="#">FAQ</a></li>
-						 <li class="nav-item phone-menu">
-							<div class="banner-button">
-								<a class="bnr-btn" href="#popup3">Get Early Access</a>
-								<div id="popup3" class="overlay">
-									<div class="popup">
-										<a class="close" href="#">&times;</a>
-										<div class="content">
-											<h3>Sign up for early acces to the platform and we'll never share your email
-												with
-												anyone.</h3>
-											<form class="email-signup">
-												<getresponse-form form-id="efe775c9-18ae-422c-84db-6ff42027e961"
-													e="0"></getresponse-form>
-											</form>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li> 
 					</ul>
+				</div>
 				</div>
 				<div class="banner-button">
 					<a class="bnr-btn" href="#popup2">Get Early Access</a>
@@ -458,17 +441,6 @@
 			});
 		});
 
-		$(document).ready(function () {
-			$('a[href="#popup3"]').on('click', function () {
-				setTimeout(function () {
-					$('#popup3').addClass('activeheadermob');
-				}, 10);
-			});
-
-			$('.close').on('click', function () {
-				$('#popup3').removeClass('activeheadermob');
-			});
-		});
 	</script>
 
 </body>
