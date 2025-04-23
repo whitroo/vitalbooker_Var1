@@ -908,6 +908,19 @@ footer.footer {
     order: 2;
     text-align: right;
   }
+  .header-navbar {
+    width: 6%;
+    order: 3;
+    text-align: right;
+}
+.header-navbar .navbar-collapse {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding: 10px 20px;
+  background: #f2f2e8;
+}
 }
 
 @media only screen and (max-width: 767px) {
