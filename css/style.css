@@ -91,7 +91,7 @@ section#myHeader {
 
 .bnr-btn:hover {
   background-color: #5CE1E6;
-  color: #121212;
+  color: #121212 !important;
   transition: 0.3s ease;
 }
 
@@ -531,16 +531,20 @@ footer.footer {
   z-index: 9999;
   display: none;
 }
-.overlay.active{
+
+.overlay.active {
   display: block;
 }
+
 .overlay:target {
   visibility: visible;
   opacity: 1;
 }
-.overlayheader.active{
+
+.overlayheader.active {
   display: block;
 }
+
 .popup {
   position: relative;
   margin: 100px auto;
@@ -566,10 +570,12 @@ footer.footer {
   border-radius: 50px;
   text-decoration: none;
 }
+
 .content h3 {
   font-size: 20px !important;
   text-align: center !important;
 }
+
 /*** MEDIA ***/
 @media only screen and (max-width: 1299px) {
   .bannr-left-cont {
@@ -1026,11 +1032,20 @@ footer.footer {
   .reserv {
     font-size: 14px;
   }
+
   .content h3 {
     font-size: 16px !important;
     text-align: center !important;
   }
+
   .img-vitebkr img {
     display: none !important;
+  }
+
+  .phone-menu .banner-button {
+    display: block !important;
+  }
+  .phone-menu .banner-button a.bnr-btn {
+    padding: 10px 20px;
 }
 }
