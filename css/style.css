@@ -541,7 +541,7 @@ footer.footer {
   opacity: 1;
 }
 
-.overlayheader.active {
+.overlay.activeheader {
   display: block;
 }
 
