@@ -561,7 +561,10 @@ footer.footer {
   border-radius: 50px;
   text-decoration: none;
 }
-
+.content h3 {
+  font-size: 20px !important;
+  text-align: center !important;
+}
 /*** MEDIA ***/
 @media only screen and (max-width: 1299px) {
   .bannr-left-cont {
@@ -1017,5 +1020,9 @@ footer.footer {
 
   .reserv {
     font-size: 14px;
+  }
+  .content h3 {
+    font-size: 16px !important;
+    text-align: center !important;
   }
 }
